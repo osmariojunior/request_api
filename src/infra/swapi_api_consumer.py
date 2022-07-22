@@ -1,12 +1,12 @@
-from os import stat
 from typing import Dict, Tuple, Type
 from collections import namedtuple
 import requests
 from requests import Request
 from src.errors.http_request_error import HttpRequestError
+from src.data.interfaces.swapi_api_consumer import SwapiApiConsumerInterface
 
 
-class SwapiApiConsumer:
+class SwapiApiConsumer(SwapiApiConsumerInterface):
     '''class to consume swapi api with http requests'''
 
     def __init__(self) -> None:
